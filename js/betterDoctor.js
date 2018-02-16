@@ -20,7 +20,7 @@ export function callBetterDoctor(latLong, doctor, specialty) {
       }
     },
     error: function() {
-      $('#result').text("There was an error processing your request. Please try again.");
+      $('#result').append(`<p>There was an error processing your request. Please try again.</p>`);
       }
   });
 }
@@ -40,7 +40,7 @@ export function getSpecialties() {
       }
     },
     error: function() {
-      $('#result').text("There was an error processing your request. Please try again.");
+      $('#result').append(`<p>There was an error processing your request. Please try again.</p>`);
       }
   });
 }

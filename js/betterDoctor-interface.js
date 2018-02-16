@@ -11,11 +11,11 @@ $(document).ready(function(){
     event.preventDefault();
     $('#result').empty();
     let address = $('#address').val();
-    console.log("address " + address);
+    console.log("address: " + address);
     let doctor = $('#doctor').val();
-    console.log("doctor " + doctor);
+    console.log("doctor: " + doctor);
     let specialty = $('#specialties').val();
-    console.log("specialty " + specialty);
+    console.log("specialty: " + specialty);
     let latLong = getGeolocation(address);
     callBetterDoctor(latLong, doctor, specialty);
   });

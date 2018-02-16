@@ -14,6 +14,7 @@ export function getGeolocation(address) {
       console.log("location found");
     },
     error: function() {
+      $('#result').append("Invalid location. Please try again.");
       console.log("location not found");
       }
    });
