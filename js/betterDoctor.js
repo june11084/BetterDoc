@@ -1,7 +1,8 @@
-import {apiKey2} from './../.env';
+import {apiKey} from './../.env';
 
-export function callBetterDoctor() {
-  let url = `https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=${apiKey2}`;
+export function callBetterDoctor(latLong) {
+  let url = `https://api.betterdoctor.com/2016-03-01/doctors?location=${latLong},50&user_location=${latLong}&skip=0&limit=10&user_key=${apiKey}`;
+  console.log(url);
   $.ajax({
     url: url,
     type: 'GET',
@@ -10,11 +11,11 @@ export function callBetterDoctor() {
     },
     success: function(response) {
       for(let i = 0; i < response.data.length ; i ++){
-        $('#result').append(`<div >${response.data[i].practices[0].location_slug}</div>`);
+        $('#result').append(`<li>${response.data[i].practices[0].location_slug}</li>`);
       }
     },
     error: function() {
-      $('#errors').text("There was an error processing your request. Please try again.");
+      $('#result').text("There was an error processing your request. Please try again.");
       }
   });
 }
