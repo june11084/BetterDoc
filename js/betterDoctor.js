@@ -10,8 +10,13 @@ export function callBetterDoctor(latLong, doctor, specialty) {
       format: 'json'
     },
     success: function(response) {
+      let notEmpty = 0;
       for(let i = 0; i < response.data.length ; i ++){
-        $('#result').append(`<li>${response.data[i].practices[0].location_slug}</li>`);
+        $('#result').append(`<li>Doctor: ${response.data[i].practices[0].name}, Phone Number: ${response.data[i].practices[0].phones[0].number}, Accepting new Patients: ${response.data[i].practices[0].accepts_new_patients}</li>`);
+        notEmpty++;
+      }
+      if(notEmpty === 0){
+        $('#result').append("No Doctors found");
       }
     },
     error: function() {

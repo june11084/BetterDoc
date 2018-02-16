@@ -11,10 +11,10 @@ export function getGeolocation(address) {
       format: 'json'
     },
     success: function(response) {
-      console.log("location found")
+      console.log("location found");
     },
     error: function() {
-      console.log("location not found")
+      console.log("location not found");
       }
    });
    cords.done(function(data){
