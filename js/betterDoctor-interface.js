@@ -18,5 +18,6 @@ $(document).ready(function(){
     console.log("specialty: " + specialty);
     let latLong = getGeolocation(address);
     callBetterDoctor(latLong, doctor, specialty);
+    $('#block').show();
   });
 });

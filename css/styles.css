@@ -1,19 +1,23 @@
 body {
    background-color: #000000;
-   color: #FFFFFF;
-   background-image: url("../img/galaxy.jpg");
+   color: #0C3182;
+   background-image: url("../img/medical.jpg");
 }
 
 #block {
+   display: none;
    position: absolute;
    margin: auto;
+   margin-top: 200px;
    top: 0;
    right: 0;
    bottom: 0;
    left: 0;
-   width: 500px;
-   height: 500px;
+   width: 1000px;
+   height: 100%;
    border-radius: 3px;
+   color: #0C3182;
+   background-color: rgba(0, 195, 227, 0.7);
 }
 
 #block, p {
