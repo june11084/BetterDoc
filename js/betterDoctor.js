@@ -1,7 +1,7 @@
 import {apiKey} from './../.env';
-
-export function callBetterDoctor(latLong, doctor, specialty) {
-  let url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${doctor}&specialty_uid=${specialty}&location=${latLong},50&user_location=${latLong}&skip=0&limit=20&user_key=${apiKey}`;
+//betterdoctor key: e65970bf7f6e96c56127c7bc116f09b2
+export function callBetterDoctor(latLong, doctor, specialty, symptoms) {
+  let url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${doctor}&specialty_uid=${specialty}&query=${symptoms}&location=${latLong},50&user_location=${latLong}&skip=0&limit=13&user_key=${apiKey}`;
   console.log(url);
   $.ajax({
     url: url,

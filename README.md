@@ -15,7 +15,8 @@ This is an Epicodus friday project for Javascript that focuses on separating fro
 1. To run this application you will need to clone/download the contents of the repository and run "npm install" in the terminal,
 then run "gulp build" in the terminal.
 2. Please note that you must have node.js installed on your machine.
-3. You would need to get your own copy of API key from this link https://developer.betterdoctor.com/.
+3. You would need to get your own copy of BetterDoctor API key from this link https://developer.betterdoctor.com/.
+4. You would need to get your own copy of google geocoding API key from this link https://developers.google.com/maps/documentation/geocoding/start#get-a-key.
 
 ### Prerequisites
 

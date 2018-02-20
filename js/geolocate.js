@@ -1,5 +1,5 @@
 import {apiKey2} from './../.env';
-
+//google geocoding key: AIzaSyB38yaIdKTqdU7Z_cuWoGbyrBkNFJWsKlE
 export function getGeolocation(address) {
    let finalCord = "0";
    let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${apiKey2}`;
