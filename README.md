@@ -17,6 +17,10 @@ then run "gulp build" in the terminal.
 2. Please note that you must have node.js installed on your machine.
 3. You would need to get your own copy of BetterDoctor API key from this link https://developer.betterdoctor.com/.
 4. You would need to get your own copy of google geocoding API key from this link https://developers.google.com/maps/documentation/geocoding/start#get-a-key.
+5. Please create a .env file in the top level or your directory, and inside the .env file you must have two export key variables:
+exports.apiKey = "Your Own betterdoctor Key";
+exports.apiKey2 = "Your Own google geolocate key";
+
 
 ### Prerequisites
 
